@@ -1,5 +1,8 @@
-FROM openjdk:8
-EXPOSE 8080
-RUN apk add -U git curl
-ADD target/devops-integration.jar devops-integration.jar
-ENTRYPOINT ["java","-jar","/devops-integration.jar"]
+FROM nginx
+MAINTAINER Super30
+WORKDIR /tmp
+ARG app= nginx
+ENV enp =production
+ENV CITY =bayarea
+COPY testfile_1 /tmp/container_file1
+ADD https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.3.9/apache-maven-3.3.9-bin.tar.gz /tmp/
