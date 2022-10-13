@@ -1,5 +1,5 @@
 FROM nginx
-MAINTAINER Super30
+MAINTAINER akter
 WORKDIR /tmp
 ARG app= nginx
 ENV enp =production
